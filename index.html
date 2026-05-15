@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>CSIP-Ω∞ — Causal Simulation Intelligence Platform</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+:root{--bg:#0a0a0f;--card:#12121a;--border:#1e1e2e;--gold:#c8a84b;--cyan:#7ec8e3;--text:#e8e4d9;--muted:#6b6b7b;}
+body{font-family:"Segoe UI",system-ui,sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding:16px;padding-bottom:80px;}
+.hdr{margin-bottom:20px;}
+.hdr h1{font-size:20px;color:var(--cyan);}
+.hdr p{font-size:12px;color:var(--muted);margin-top:4px;}
+.stack{display:flex;flex-direction:column;gap:8px;margin:12px 0;}
+.node{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;font-size:12px;}
+.node-badge{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;}
+.node-info{flex:1}
+.node-info h4{font-size:13px;color:var(--text);}
+.node-info p{font-size:11px;color:var(--muted);margin-top:2px;}
+.topo{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin:14px 0;}
+.topo h4{font-size:12px;color:var(--gold);margin-bottom:8px;letter-spacing:.05em;}
+.topo pre{font-size:10px;color:var(--cyan);overflow-x:auto;line-height:1.6;}
+.version{display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;}
+.ver{background:#0a0a15;border:1px solid #1e1e2e;border-radius:8px;padding:8px 10px;font-size:11px;color:var(--muted);}
+.ver span{color:var(--cyan);}
+.metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:12px 0;}
+.metric{background:var(--card);border:1px solid var(--border);border-radius:10px;padding:12px;text-align:center;}
+.metric .val{font-size:20px;font-weight:700;color:var(--cyan);}
+.metric .lbl{font-size:10px;color:var(--muted);margin-top:2px;}
+</style>
+</head>
+<body>
+<div class="hdr">
+  <h1>🌌🧠 CSIP-Ω∞</h1>
+  <p>Causal Simulation Intelligence Platform — GitOps Deployed Platform</p>
+</div>
+
+<div class="metrics">
+  <div class="metric"><div class="val">v16</div><div class="lbl">Iterations</div></div>
+  <div class="metric"><div class="val">Ω∞</div><div class="lbl">Current Version</div></div>
+  <div class="metric"><div class="val">μ≥0.999</div><div class="lbl">Coherence Floor</div></div>
+</div>
+
+<div class="topo">
+  <h4>CLUSTER TOPOLOGY</h4>
+  <pre>┌──────────────┐    ┌──────────────┐
+│   ArgoCD     │    │  Git Repo    │
+│  (GitOps)    │────│  (source)   │
+└──────────────┘    └──────────────┘
+         │                 │
+    ┌────┴────┬────────────┴────┐
+    ▼         ▼                  ▼
+┌────────┐┌────────┐      ┌──────────────┐
+│ Kafka  ││  Ray   │      │   Neo4j      │
+│Cluster ││Cluster │      │  Graph DB   │
+└────────┘└────────┘      └──────────────┘
+    │         │                  │
+    └────────┴────────┬───────────┘
+              ▼        ▼
+        ┌────────┐┌─────────────┐
+        │FastAPI ││ Prometheus │
+        │Control ││ + Grafana  │
+        │Plane   ││            │
+        └────────┘└─────────────┘</pre>
+</div>
+
+<div class="node">
+  <div class="node-badge" style="background:#ef9a9a;color:#0a0a0f">K</div>
+  <div class="node-info"><h4>Kafka Cluster</h4><p>Event stream backbone. Ingestion, partitioning, replay storage.</p></div>
+</div>
+<div class="node">
+  <div class="node-badge" style="background:#b39ddb;color:#0a0a0f">R</div>
+  <div class="node-info"><h4>Ray Cluster</h4><p>Distributed RL compute + simulation execution. PPO/MAPPO workers.</p></div>
+</div>
+<div class="node">
+  <div class="node-badge" style="background:#6cef9a;color:#0a0a0f">N</div>
+  <div class="node-info"><h4>Neo4j Graph DB</h4><p>Causal memory. DAG persistence. Fork graph storage.</p></div>
+</div>
+<div class="node">
+  <div class="node-badge" style="background:#e8b86d;color:#0a0a0f">A</div>
+  <div class="node-info"><h4>FastAPI Control Plane</h4><p>REST/GraphQL API. TaskBus integration. Orchestration triggers.</p></div>
+</div>
+<div class="node">
+  <div class="node-badge" style="background:#7ec8e3;color:#0a0a0f">D3</div>
+  <div class="node-info"><h4>CSIP Fork Explorer UI</h4><p>Live causal visualization. Timeline scrubber. Intervention editor.</p></div>
+</div>
+
+<div class="version">
+  <div class="ver">v1 <span>Genesis</span></div>
+  <div class="ver">v2 <span>Causal SIM</span></div>
+  <div class="ver">v3 <span>Research-grade RL</span></div>
+  <div class="ver">v4 <span>Neural Causal Cluster</span></div>
+  <div class="ver">v5 <span>Causal Foundation World</span></div>
+  <div class="ver">v6 <span>Self-Evolving</span></div>
+  <div class="ver">v7 <span>Autonomous Causal Engine</span></div>
+  <div class="ver">v8-9 <span>Autonomous Institution</span></div>
+  <div class="ver">v10-11 <span>Causal Science Stack</span></div>
+  <div class="ver">v12 <span>Verified Causal Research</span></div>
+  <div class="ver">v13 <span>Real System Upgrade</span></div>
+  <div class="ver">v14 <span>Distributed Causal RL</span></div>
+  <div class="ver">v15 <span>Full Runtime Repo</span></div>
+  <div class="ver">v16 <span>CSIP-Ω∞ Final Form</span></div>
+</div>
+
+<div class="topo">
+  <h4>GITOPS DEPLOYMENT</h4>
+  <pre style="font-size:10px;color:var(--muted)">
+csip-omega/
+├── charts/         (kafka, ray, neo4j, api, rl-workers)
+├── apps/           (api, replay-engine, causal-engine, rl-trainer)
+├── ui/             (fork-explorer-react)
+├── gitops/         (ArgoCD applications)
+└── infra/          (Helm values, docker-compose)</pre>
+</div>
+</body>
+</html>
